@@ -2,9 +2,9 @@
 
 import os, sys
 
-webwarePath = 'C:/forestal/Webware-0.8.1'
-appWorkPath = 'c:/forestal/ForestManApp'
-sys.path.append('c:/forestal/ForestManApp\\lib')
+webwarePath = os.environ['WEBWAREPATH']
+appWorkPath = os.environ['FORESTMANPATH']
+sys.path.append(appWorkPath+'\\lib')
 
 
 def main(args):

@@ -1,10 +1,10 @@
 import os, re, sys, win32serviceutil
 
 # settings
-appWorkPath = 'c:/forestal/ForestManApp'
-webwarePath = 'C:/forestal/Webware-0.8.1'
-serviceName = 'WebKit'
-serviceDisplayName = 'WebKit App Server'
+appWorkPath = os.environ['FORESTMANPATH']
+webwarePath = os.environ['WEBWAREPATH']
+serviceName = 'ForestMan'
+serviceDisplayName = 'ForestMan App Server'
 
 # ensure Webware is on sys.path
 sys.path.insert(0, webwarePath)
