@@ -6,6 +6,10 @@ gettext.install('ForestMan')
 
 class ForestManPage(SidebarPage):
 
+	def __init__(self):
+		self.error=None
+		SidebarPage.__init__(self)
+		
 	def cornerTitle(self):
 		return _("Forestry Manager v1.0")
 
@@ -22,8 +26,7 @@ class ForestManPage(SidebarPage):
 	def title(self):
 		return _("Empty ForestMan template")
 
-	def writeErrorBody(self,error):
-		self.writeln('<h1>')
-		self.writeln(_("An error occurred"))
-		self.writeln('</h1>')
-		self.writeln(error.errortext)
+
+	def htBodyArgs(self):
+		if self.error:
+			return SidebarPage.htBodyArgs(self) + """ onload="javascript:alert('""" + self.error.errortext + """')" """

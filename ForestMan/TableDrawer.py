@@ -6,7 +6,8 @@ from MiddleLayer.Globals import MiddleLayerError
 class TableDrawer:
 	"""
 	Derived classes should provide a object member called fields that is a list of column definitions.
-	Each column definition consists ofa list of the displayed name, a bool signifying read/write, the data name, and optionally a idlooker
+	Each column definition consists of a list of the displayed name, a number signifying: read/write(0),
+	read only(1), read-only but allow a value on creation(2); the data name, and optionally a idlooker
 	For stright columns the data name should be the name of the column in the database
 	for idloopkup columns it should be a different name that doesnt clash with anything else in the table
 	(the actual data name will be derived from the idlooker).
@@ -46,10 +47,16 @@ class TableDrawer:
 			if self.edit and i[self.idfield]==req.field('id'):
 				wr("<tr><form method=post>")
 				for j in self.fields:
-					if len(j)>=3:
-						dolist(j[2],i)
+					if j[1]==0:
+						if len(j)>=4:
+							dolist(j[3],i)
+						else:
+							wr("<td><input type=text name=%s value='%s'></td>"%(j[2],i[j[2]]))
 					else:
-						wr("<td><input type=text name=%s value='%s'></td>"%(j[1],i[j[1]]))
+						if len(j)>=4:
+							addlookup(j[3],i,j[2])
+						
+						wr("<td><input type=hidden name=%s value='%s'>%s</td>" %(j[2],i[j[2]],i[j[2]]))
 				wr("<td><input type=submit name=_action_changerow value='%s'></td>" % _("Change"))
 				wr("</form></tr>")
 				wr('<tr>')
@@ -59,10 +66,10 @@ class TableDrawer:
 				wr("<input type=hidden name=id value='%s'>" % i[self.idfield])
 
 				for j in self.fields:
-					if len(j)>=3:
-						addlookup(j[2],i,j[1])
+					if len(j)>=4:
+						addlookup(j[3],i,j[2])
 					
-					wr("<td>%s</td>" %i[j[1]])
+					wr("<td>%s</td>" %i[j[2]])
 	
 				wr("<td><input type=submit name=_action_editrow value='%s'></td>" % _("Edit") )
 				wr("</form>")
@@ -71,33 +78,41 @@ class TableDrawer:
 		if not self.edit:
 			wr("<tr><form method=post>")
 			for j in self.fields:
-				if len(j)>=3:
-					wr("<td><select size=1 name=%s>" % j[2].tableinfo['IdField'])
-					for i in j[2].getlist():
-						wr("<option VALUE=%s>%s</option>" % i)
-					wr("</td>")
+				if j[1]==0 or j[1]==2:
+					if len(j)>=4:
+						wr("<td><select size=1 name=%s>" % j[3].tableinfo['IdField'])
+						for i in j[3].getlist():
+							wr("<option VALUE=%s>%s</option>" % i)
+						wr("</td>")
+					else:
+						wr("<td><input type=text name=%s></td>"%j[2])
 				else:
-					wr("<td><input type=text name=%s></td>"%j[1])
+					wr("<td></td>")
 
 			wr("<td><input type=submit name=_action_addrow value='%s'></td>" % _("Add"))
 			wr("</form></tr>")
 
 		wr('</tbody>')		
 
+
 	def addrow(self):
 		f = self.request().fields()
 		try:
 			self.add(f)
 		except MiddleLayerError,e:
-			self.writeErrorBody(e)
+			self.error = e
 		self.writeBody()
+		self.error=None
 
 	def changerow(self):
 		f = self.request().fields()
-		print f
-		self.modify(f)
+		try:
+			self.modify(f)
+		except MiddleLayerError,e:
+			self.error=e
 		self.edit=False
 		self.writeBody()
+		self.error=None
 
 	def editrow(self):
 		self.edit=True

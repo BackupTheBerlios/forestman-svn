@@ -24,12 +24,12 @@ class TaskCreatorPage(ForestManPage, TableDrawer):
 		unitidlooker = UnitIdLooker(conn)
 		taskgroupidlooker = TaskGroupIdLooker(conn)
 		self.taskcreator=TaskCreator(conn)
-		self.fields = [[_("Task Id"),"TaskId"],
-				  [_("Description"),"Description"],
-				  [_("Task Group"),"TaskGroup",taskgroupidlooker],
-				  [_("Unit"),"Unit",unitidlooker],
-				  [_("Min Age"),"AgeMin"],
-				  [_("Max Age"),"AgeMax"]]
+		self.fields = [[_("Task Id"),2,"TaskId"],
+				  [_("Description"),0,"Description"],
+				  [_("Task Group"),0,"TaskGroup",taskgroupidlooker],
+				  [_("Unit"),0,"Unit",unitidlooker],
+				  [_("Min Age"),0,"AgeMin"],
+				  [_("Max Age"),0,"AgeMax"]]
 		self.idfield="TaskId"
 
 	def add(self,f):
