@@ -1,0 +1,7 @@
+if i want to select all undertified contractedtasks then i need to
+
+see if the task has Completed set to Y or N. if so return this 
+else
+  sum of completed of all corresponing transactions which are in Certificated adds 
+  up to > quantity contracted.
+

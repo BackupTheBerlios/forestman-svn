@@ -1,0 +1,7 @@
+The project  provides integration of GIS and business intelligence for the forestry sector. It will be initially implemented as a web application using Python.
+
+Its main goals are:
+- to provide dataminable archiving of forest management transactions
+- to integrate with existing or newly created GIS infrastructure
+- to provide user interfaces tailored to different roles
+- to be designed in such a way to allow for other frontends.

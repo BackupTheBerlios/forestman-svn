@@ -1,0 +1,766 @@
+--------------------------------------------------------------------
+Installing Signal Handler
+__name__=WebKit.ThreadedAppServer
+WebKit AppServer 0.8.1
+part of Webware for Python
+Copyright 1999-2001 by Chuck Esterbrook. All Rights Reserved.
+WebKit and Webware are open source.
+Please visit:  http://webware.sourceforge.net
+
+Process id is 3692
+Date/time is Mon Jul 19 00:39:06 2004
+
+AutoReload             = 0
+AutoReloadPollInterval = 1
+CheckInterval          = 100
+Host                   = 127.0.0.1
+MaxServerThreads       = 20
+MinServerThreads       = 5
+NTServiceLogFilename   = c:\forestal\ForestManApp\Logs\NTService.log
+PlugInDirs             = ['C:\\forestal\\Webware-0.8.1']
+PlugIns                = []
+Port                   = 8086
+PrintConfigAtStartUp   = 1
+StartServerThreads     = 10
+Verbose                = 1
+
+ActivityLogColumns              = ['request.remoteAddress', 'request.method', 'request.uri', 'response.size', 'servlet.name', 'request.timeStamp', 'transaction.duration', 'transaction.errorOccurred']
+ActivityLogFilename             = c:\forestal\ForestManApp\Logs\Activity.csv
+AdminPassword                   = admin
+CacheServletClasses             = 1
+CacheServletInstances           = 1
+ClearPSPCacheOnStart            = 1
+Contexts                        = {'ForestMan': 'ForestMan', 'default': 'ForestMan'}
+Debug                           = {'Sessions': 0}
+DirectoryFile                   = ['index', 'Index', 'main', 'Main']
+DynamicSessionTimeout           = 15
+EmailErrorReportAsAttachment    = 0
+EmailErrors                     = 0
+ErrorEmailHeaders               = {'To': ['-@-.com'], 'Reply-to': '-@-.com', 'From': '-@-.com', 'Content-type': 'text/html', 'Subject': '[WebKit Error]'}
+ErrorEmailServer                = mail.-.com
+ErrorLogFilename                = c:\forestal\ForestManApp\Logs\Errors.csv
+ErrorMessagesDir                = c:\forestal\ForestManApp\ErrorMsgs
+ExtensionCascadeOrder           = ['.py', '.psp', '.html']
+ExtensionsToIgnore              = ['.pyc', '.pyo', '.py~', '.psp~', '.html~', '.bak', '.tmpl']
+ExtensionsToServe               = []
+ExtraPathInfo                   = 0
+FancyTracebackContext           = 5
+FilesToHide                     = ['.*', '*~', '*.bak', '*.tmpl', '*.config', '__init__.*', '*.pyc', '*.pyo']
+FilesToServe                    = []
+IgnoreInvalidSession            = 1
+IncludeFancyTraceback           = 0
+LogActivity                     = 0
+MaxDynamicMemorySessions        = 10000
+MaxValueLengthInExceptionReport = 500
+OldStyleActions                 = 0
+PrintConfigAtStartUp            = 1
+RPCExceptionReturn              = traceback
+ReportRPCExceptionsInWebKit     = 1
+SaveErrorMessages               = 1
+SessionPrefix                   = None
+SessionStore                    = Dynamic
+SessionTimeout                  = 60
+ShowDebugInfoOnErrors           = 1
+UnknownFileTypes                = {'CheckDate': 1, 'Technique': 'serveContent', 'CacheContent': 1, 'ReuseServlets': 1}
+UseAutomaticPathSessions        = 0
+UseCascadingExtensions          = 1
+UserErrorMessage                = The site is having technical difficulties with this page. An error has been logged, and the problem will be fixed as soon as possible. Sorry!
+
+Loading context: ForestMan at c:\forestal\ForestManApp\ForestMan
+
+Current directory: c:\forestal\ForestManApp
+Session Sweeper started
+
+Plug-ins list: C:\forestal\Webware-0.8.1\COMKit, C:\forestal\Webware-0.8.1\MiddleKit, C:\forestal\Webware-0.8.1\MiscUtils, C:\forestal\Webware-0.8.1\PSP, C:\forestal\Webware-0.8.1\TaskKit, C:\forestal\Webware-0.8.1\UserKit, C:\forestal\Webware-0.8.1\WebUtils
+Loading plug-in: COMKit at C:\forestal\Webware-0.8.1\COMKit
+Loading plug-in: MiddleKit at C:\forestal\Webware-0.8.1\MiddleKit
+Loading context: MKBrowser at C:/forestal/Webware-0.8.1\MiddleKit\WebBrowser
+Loading plug-in: MiscUtils at C:\forestal\Webware-0.8.1\MiscUtils
+Loading plug-in: PSP at C:\forestal\Webware-0.8.1\PSP
+Loading plug-in: TaskKit at C:\forestal\Webware-0.8.1\TaskKit
+Loading plug-in: UserKit at C:\forestal\Webware-0.8.1\UserKit
+Loading plug-in: WebUtils at C:\forestal\Webware-0.8.1\WebUtils
+
+Listening on ('127.0.0.1', 8086)
+Creating 10 threads..........
+Ready  (2.45 seconds after launch)
+
+    1  2004-07-19 00:39:25  /
+    1  0.05 secs            /
+
+    2  2004-07-19 00:48:28  /WK/MKBrowser/
+    2  0.00 secs            /WK/MKBrowser/
+
+    3  2004-07-19 00:48:32  /WK/ForestMan/
+    3  0.00 secs            /WK/ForestMan/
+
+    4  2004-07-19 00:48:53  /WK/ForestMan/
+    4  0.00 secs            /WK/ForestMan/
+
+    5  2004-07-19 00:55:07  /WK/ForestMan/
+    5  0.00 secs            /WK/ForestMan/
+
+    6  2004-07-19 00:55:14  /WK/MKBrowser/
+    6  0.00 secs            /WK/MKBrowser/
+
+    7  2004-07-19 01:26:44  /
+    7  0.00 secs            /
+
+    8  2004-07-19 01:31:42  /
+    8  0.00 secs            /
+
+    9  2004-07-19 01:31:51  ThreadedAppServer: Shutting Down
+Stopping AutoReload Monitor
+Shutting down the AppServer
+Application is Shutting Down
+Application has been succesfully shutdown.
+AppServer has been shutdown
+--------------------------------------------------------------------
+Installing Signal Handler
+__name__=WebKit.ThreadedAppServer
+WebKit AppServer 0.8.1
+part of Webware for Python
+Copyright 1999-2001 by Chuck Esterbrook. All Rights Reserved.
+WebKit and Webware are open source.
+Please visit:  http://webware.sourceforge.net
+
+Process id is 968
+Date/time is Mon Jul 19 01:31:54 2004
+
+AutoReload             = 0
+AutoReloadPollInterval = 1
+CheckInterval          = 100
+Host                   = 127.0.0.1
+MaxServerThreads       = 20
+MinServerThreads       = 5
+NTServiceLogFilename   = c:\forestal\ForestManApp\Logs\NTService.log
+PlugInDirs             = ['C:\\forestal\\Webware-0.8.1']
+PlugIns                = []
+Port                   = 8086
+PrintConfigAtStartUp   = 1
+StartServerThreads     = 10
+Verbose                = 1
+
+ActivityLogColumns              = ['request.remoteAddress', 'request.method', 'request.uri', 'response.size', 'servlet.name', 'request.timeStamp', 'transaction.duration', 'transaction.errorOccurred']
+ActivityLogFilename             = c:\forestal\ForestManApp\Logs\Activity.csv
+AdminPassword                   = admin
+CacheServletClasses             = 1
+CacheServletInstances           = 1
+ClearPSPCacheOnStart            = 1
+Contexts                        = {'ForestMan': 'ForestMan', 'default': 'ForestMan'}
+Debug                           = {'Sessions': 0}
+DirectoryFile                   = ['index', 'Index', 'main', 'Main']
+DynamicSessionTimeout           = 15
+EmailErrorReportAsAttachment    = 0
+EmailErrors                     = 0
+ErrorEmailHeaders               = {'To': ['-@-.com'], 'Reply-to': '-@-.com', 'From': '-@-.com', 'Content-type': 'text/html', 'Subject': '[WebKit Error]'}
+ErrorEmailServer                = mail.-.com
+ErrorLogFilename                = c:\forestal\ForestManApp\Logs\Errors.csv
+ErrorMessagesDir                = c:\forestal\ForestManApp\ErrorMsgs
+ExtensionCascadeOrder           = ['.py', '.psp', '.html']
+ExtensionsToIgnore              = ['.pyc', '.pyo', '.py~', '.psp~', '.html~', '.bak', '.tmpl']
+ExtensionsToServe               = []
+ExtraPathInfo                   = 0
+FancyTracebackContext           = 5
+FilesToHide                     = ['.*', '*~', '*.bak', '*.tmpl', '*.config', '__init__.*', '*.pyc', '*.pyo']
+FilesToServe                    = []
+IgnoreInvalidSession            = 1
+IncludeFancyTraceback           = 0
+LogActivity                     = 0
+MaxDynamicMemorySessions        = 10000
+MaxValueLengthInExceptionReport = 500
+OldStyleActions                 = 0
+PrintConfigAtStartUp            = 1
+RPCExceptionReturn              = traceback
+ReportRPCExceptionsInWebKit     = 1
+SaveErrorMessages               = 1
+SessionPrefix                   = None
+SessionStore                    = Dynamic
+SessionTimeout                  = 60
+ShowDebugInfoOnErrors           = 1
+UnknownFileTypes                = {'CheckDate': 1, 'Technique': 'serveContent', 'CacheContent': 1, 'ReuseServlets': 1}
+UseAutomaticPathSessions        = 0
+UseCascadingExtensions          = 1
+UserErrorMessage                = The site is having technical difficulties with this page. An error has been logged, and the problem will be fixed as soon as possible. Sorry!
+
+Loading context: ForestMan at c:\forestal\ForestManApp\ForestMan
+
+Current directory: c:\forestal\ForestManApp
+Session Sweeper started
+
+Plug-ins list: C:\forestal\Webware-0.8.1\COMKit, C:\forestal\Webware-0.8.1\MiddleKit, C:\forestal\Webware-0.8.1\MiscUtils, C:\forestal\Webware-0.8.1\PSP, C:\forestal\Webware-0.8.1\TaskKit, C:\forestal\Webware-0.8.1\UserKit, C:\forestal\Webware-0.8.1\WebUtils
+Loading plug-in: COMKit at C:\forestal\Webware-0.8.1\COMKit
+Loading plug-in: MiddleKit at C:\forestal\Webware-0.8.1\MiddleKit
+Loading context: MKBrowser at C:/forestal/Webware-0.8.1\MiddleKit\WebBrowser
+Loading plug-in: MiscUtils at C:\forestal\Webware-0.8.1\MiscUtils
+Loading plug-in: PSP at C:\forestal\Webware-0.8.1\PSP
+Loading plug-in: TaskKit at C:\forestal\Webware-0.8.1\TaskKit
+Loading plug-in: UserKit at C:\forestal\Webware-0.8.1\UserKit
+Loading plug-in: WebUtils at C:\forestal\Webwar--------------------------------------------------------------------
+Installing Signal Handler
+__name__=WebKit.ThreadedAppServer
+WebKit AppServer 0.8.1
+part of Webware for Python
+Copyright 1999-2001 by Chuck Esterbrook. All Rights Reserved.
+WebKit and Webware are open source.
+Please visit:  http://webware.sourceforge.net
+
+Process id is 1912
+Date/time is Mon Jul 19 02:49:09 2004
+
+AutoReload             = 0
+AutoReloadPollInterval = 1
+CheckInterval          = 100
+Host                   = 127.0.0.1
+MaxServerThreads       = 20
+MinServerThreads       = 5
+NTServiceLogFilename   = c:\forestal\ForestManApp\Logs\NTService.log
+PlugInDirs             = ['C:\\forestal\\Webware-0.8.1']
+PlugIns                = []
+Port                   = 8086
+PrintConfigAtStartUp   = 1
+StartServerThreads     = 10
+Verbose                = 1
+
+ActivityLogColumns              = ['request.remoteAddress', 'request.method', 'request.uri', 'response.size', 'servlet.name', 'request.timeStamp', 'transaction.duration', 'transaction.errorOccurred']
+ActivityLogFilename             = c:\forestal\ForestManApp\Logs\Activity.csv
+AdminPassword                   = admin
+CacheServletClasses             = 1
+CacheServletInstances           = 1
+ClearPSPCacheOnStart            = 1
+Contexts                        = {'ForestMan': 'ForestMan', 'default': 'ForestMan'}
+Debug                           = {'Sessions': 0}
+DirectoryFile                   = ['index', 'Index', 'main', 'Main']
+DynamicSessionTimeout           = 15
+EmailErrorReportAsAttachment    = 0
+EmailErrors                     = 0
+ErrorEmailHeaders               = {'To': ['-@-.com'], 'Reply-to': '-@-.com', 'From': '-@-.com', 'Content-type': 'text/html', 'Subject': '[WebKit Error]'}
+ErrorEmailServer                = mail.-.com
+ErrorLogFilename                = c:\forestal\ForestManApp\Logs\Errors.csv
+ErrorMessagesDir                = c:\forestal\ForestManApp\ErrorMsgs
+ExtensionCascadeOrder           = ['.py', '.psp', '.html']
+ExtensionsToIgnore              = ['.pyc', '.pyo', '.py~', '.psp~', '.html~', '.bak', '.tmpl']
+ExtensionsToServe               = []
+ExtraPathInfo                   = 0
+FancyTracebackContext           = 5
+FilesToHide                     = ['.*', '*~', '*.bak', '*.tmpl', '*.config', '__init__.*', '*.pyc', '*.pyo']
+FilesToServe                    = []
+IgnoreInvalidSession            = 1
+IncludeFancyTraceback           = 0
+LogActivity                     = 0
+MaxDynamicMemorySessions        = 10000
+MaxValueLengthInExceptionReport = 500
+OldStyleActions                 = 0
+PrintConfigAtStartUp            = 1
+RPCExceptionReturn              = traceback
+ReportRPCExceptionsInWebKit     = 1
+SaveErrorMessages               = 1
+SessionPrefix                   = None
+SessionStore                    = Dynamic
+SessionTimeout                  = 60
+ShowDebugInfoOnErrors           = 1
+UnknownFileTypes                = {'CheckDate': 1, 'Technique': 'serveContent', 'CacheContent': 1, 'ReuseServlets': 1}
+UseAutomaticPathSessions        = 0
+UseCascadingExtensions          = 1
+UserErrorMessage                = The site is having technical difficulties with this page. An error has been logged, and the problem will be fixed as soon as possible. Sorry!
+
+Loading context: ForestMan at c:\forestal\ForestManApp\ForestMan
+
+Current directory: c:\forestal\ForestManApp
+Session Sweeper started
+
+Plug-ins list: C:\forestal\Webware-0.8.1\COMKit, C:\forestal\Webware-0.8.1\MiddleKit, C:\forestal\Webware-0.8.1\MiscUtils, C:\forestal\Webware-0.8.1\PSP, C:\forestal\Webware-0.8.1\TaskKit, C:\forestal\Webware-0.8.1\UserKit, C:\forestal\Webware-0.8.1\WebUtils
+Loading plug-in: COMKit at C:\forestal\Webware-0.8.1\COMKit
+Loading plug-in: MiddleKit at C:\forestal\Webware-0.8.1\MiddleKit
+Loading context: MKBrowser at C:/forestal/Webware-0.8.1\MiddleKit\WebBrowser
+Loading plug-in: MiscUtils at C:\forestal\Webware-0.8.1\MiscUtils
+Loading plug-in: PSP at C:\forestal\Webware-0.8.1\PSP
+Loading plug-in: TaskKit at C:\forestal\Webware-0.8.1\TaskKit
+Loading plug-in: UserKit at C:\forestal\Webware-0.8.1\UserKit
+Loading plug-in: WebUtils at C:\forestal\Webwa--------------------------------------------------------------------
+Installing Signal Handler
+__name__=WebKit.ThreadedAppServer
+WebKit AppServer 0.8.1
+part of Webware for Python
+Copyright 1999-2001 by Chuck Esterbrook. All Rights Reserved.
+WebKit and Webware are open source.
+Please visit:  http://webware.sourceforge.net
+
+Process id is 1556
+Date/time is Mon Jul 19 12:43:45 2004
+
+AutoReload             = 0
+AutoReloadPollInterval = 1
+CheckInterval          = 100
+Host                   = 127.0.0.1
+MaxServerThreads       = 20
+MinServerThreads       = 5
+NTServiceLogFilename   = c:\forestal\ForestManApp\Logs\NTService.log
+PlugInDirs             = ['C:\\forestal\\Webware-0.8.1']
+PlugIns                = []
+Port                   = 8086
+PrintConfigAtStartUp   = 1
+StartServerThreads     = 10
+Verbose                = 1
+
+ActivityLogColumns              = ['request.remoteAddress', 'request.method', 'request.uri', 'response.size', 'servlet.name', 'request.timeStamp', 'transaction.duration', 'transaction.errorOccurred']
+ActivityLogFilename             = c:\forestal\ForestManApp\Logs\Activity.csv
+AdminPassword                   = admin
+CacheServletClasses             = 1
+CacheServletInstances           = 1
+ClearPSPCacheOnStart            = 1
+Contexts                        = {'ForestMan': 'ForestMan', 'default': 'ForestMan'}
+Debug                           = {'Sessions': 0}
+DirectoryFile                   = ['index', 'Index', 'main', 'Main']
+DynamicSessionTimeout           = 15
+EmailErrorReportAsAttachment    = 0
+EmailErrors                     = 0
+ErrorEmailHeaders               = {'To': ['-@-.com'], 'Reply-to': '-@-.com', 'From': '-@-.com', 'Content-type': 'text/html', 'Subject': '[WebKit Error]'}
+ErrorEmailServer                = mail.-.com
+ErrorLogFilename                = c:\forestal\ForestManApp\Logs\Errors.csv
+ErrorMessagesDir                = c:\forestal\ForestManApp\ErrorMsgs
+ExtensionCascadeOrder           = ['.py', '.psp', '.html']
+ExtensionsToIgnore              = ['.pyc', '.pyo', '.py~', '.psp~', '.html~', '.bak', '.tmpl']
+ExtensionsToServe               = []
+ExtraPathInfo                   = 0
+FancyTracebackContext           = 5
+FilesToHide                     = ['.*', '*~', '*.bak', '*.tmpl', '*.config', '__init__.*', '*.pyc', '*.pyo']
+FilesToServe                    = []
+IgnoreInvalidSession            = 1
+IncludeFancyTraceback           = 0
+LogActivity                     = 0
+MaxDynamicMemorySessions        = 10000
+MaxValueLengthInExceptionReport = 500
+OldStyleActions                 = 0
+PrintConfigAtStartUp            = 1
+RPCExceptionReturn              = traceback
+ReportRPCExceptionsInWebKit     = 1
+SaveErrorMessages               = 1
+SessionPrefix                   = None
+SessionStore                    = Dynamic
+SessionTimeout                  = 60
+ShowDebugInfoOnErrors           = 1
+UnknownFileTypes                = {'CheckDate': 1, 'Technique': 'serveContent', 'CacheContent': 1, 'ReuseServlets': 1}
+UseAutomaticPathSessions        = 0
+UseCascadingExtensions          = 1
+UserErrorMessage                = The site is having technical difficulties with this page. An error has been logged, and the problem will be fixed as soon as possible. Sorry!
+
+Loading context: ForestMan at c:\forestal\ForestManApp\ForestMan
+
+Current directory: c:\forestal\ForestManApp
+Session Sweeper started
+
+Plug-ins list: C:\forestal\Webware-0.8.1\COMKit, C:\forestal\Webware-0.8.1\MiddleKit, C:\forestal\Webware-0.8.1\MiscUtils, C:\forestal\Webware-0.8.1\PSP, C:\forestal\Webware-0.8.1\TaskKit, C:\forestal\Webware-0.8.1\UserKit, C:\forestal\Webware-0.8.1\WebUtils
+Loading plug-in: COMKit at C:\forestal\Webware-0.8.1\COMKit
+Loading plug-in: MiddleKit at C:\forestal\Webware-0.8.1\MiddleKit
+Loading context: MKBrowser at C:/forestal/Webware-0.8.1\MiddleKit\WebBrowser
+Loading plug-in: MiscUtils at C:\forestal\Webware-0.8.1\MiscUtils
+Loading plug-in: PSP at C:\forestal\Webware-0.8.1\PSP
+Loading plug-in: TaskKit at C:\forestal\Webware-0.8.1\TaskKit
+Loading plug-in: UserKit at C:\forestal\Webware-0.8.1\UserKit
+Loading plug-in: WebUtils at C:\forestal\Webwa--------------------------------------------------------------------
+Installing Signal Handler
+__name__=WebKit.ThreadedAppServer
+WebKit AppServer 0.8.1
+part of Webware for Python
+Copyright 1999-2001 by Chuck Esterbrook. All Rights Reserved.
+WebKit and Webware are open source.
+Please visit:  http://webware.sourceforge.net
+
+Process id is 1548
+Date/time is Mon Jul 19 13:39:07 2004
+
+AutoReload             = 0
+AutoReloadPollInterval = 1
+CheckInterval          = 100
+Host                   = 127.0.0.1
+MaxServerThreads       = 20
+MinServerThreads       = 5
+NTServiceLogFilename   = c:\forestal\ForestManApp\Logs\NTService.log
+PlugInDirs             = ['C:\\forestal\\Webware-0.8.1']
+PlugIns                = []
+Port                   = 8086
+PrintConfigAtStartUp   = 1
+StartServerThreads     = 10
+Verbose                = 1
+
+ActivityLogColumns              = ['request.remoteAddress', 'request.method', 'request.uri', 'response.size', 'servlet.name', 'request.timeStamp', 'transaction.duration', 'transaction.errorOccurred']
+ActivityLogFilename             = c:\forestal\ForestManApp\Logs\Activity.csv
+AdminPassword                   = admin
+CacheServletClasses             = 1
+CacheServletInstances           = 1
+ClearPSPCacheOnStart            = 1
+Contexts                        = {'ForestMan': 'ForestMan', 'default': 'ForestMan'}
+Debug                           = {'Sessions': 0}
+DirectoryFile                   = ['index', 'Index', 'main', 'Main']
+DynamicSessionTimeout           = 15
+EmailErrorReportAsAttachment    = 0
+EmailErrors                     = 0
+ErrorEmailHeaders               = {'To': ['-@-.com'], 'Reply-to': '-@-.com', 'From': '-@-.com', 'Content-type': 'text/html', 'Subject': '[WebKit Error]'}
+ErrorEmailServer                = mail.-.com
+ErrorLogFilename                = c:\forestal\ForestManApp\Logs\Errors.csv
+ErrorMessagesDir                = c:\forestal\ForestManApp\ErrorMsgs
+ExtensionCascadeOrder           = ['.py', '.psp', '.html']
+ExtensionsToIgnore              = ['.pyc', '.pyo', '.py~', '.psp~', '.html~', '.bak', '.tmpl']
+ExtensionsToServe               = []
+ExtraPathInfo                   = 0
+FancyTracebackContext           = 5
+FilesToHide                     = ['.*', '*~', '*.bak', '*.tmpl', '*.config', '__init__.*', '*.pyc', '*.pyo']
+FilesToServe                    = []
+IgnoreInvalidSession            = 1
+IncludeFancyTraceback           = 0
+LogActivity                     = 0
+MaxDynamicMemorySessions        = 10000
+MaxValueLengthInExceptionReport = 500
+OldStyleActions                 = 0
+PrintConfigAtStartUp            = 1
+RPCExceptionReturn              = traceback
+ReportRPCExceptionsInWebKit     = 1
+SaveErrorMessages               = 1
+SessionPrefix                   = None
+SessionStore                    = Dynamic
+SessionTimeout                  = 60
+ShowDebugInfoOnErrors           = 1
+UnknownFileTypes                = {'CheckDate': 1, 'Technique': 'serveContent', 'CacheContent': 1, 'ReuseServlets': 1}
+UseAutomaticPathSessions        = 0
+UseCascadingExtensions          = 1
+UserErrorMessage                = The site is having technical difficulties with this page. An error has been logged, and the problem will be fixed as soon as possible. Sorry!
+
+Loading context: ForestMan at c:\forestal\ForestManApp\ForestMan
+
+Current directory: c:\forestal\ForestManApp
+Session Sweeper started
+
+Plug-ins list: C:\forestal\Webware-0.8.1\COMKit, C:\forestal\Webware-0.8.1\MiddleKit, C:\forestal\Webware-0.8.1\MiscUtils, C:\forestal\Webware-0.8.1\PSP, C:\forestal\Webware-0.8.1\TaskKit, C:\forestal\Webware-0.8.1\UserKit, C:\forestal\Webware-0.8.1\WebUtils
+Loading plug-in: COMKit at C:\forestal\Webware-0.8.1\COMKit
+Loading plug-in: MiddleKit at C:\forestal\Webware-0.8.1\MiddleKit
+Loading context: MKBrowser at C:/forestal/Webware-0.8.1\MiddleKit\WebBrowser
+Loading plug-in: MiscUtils at C:\forestal\Webware-0.8.1\MiscUtils
+Loading plug-in: PSP at C:\forestal\Webware-0.8.1\PSP
+Loading plug-in: TaskKit at C:\forestal\Webware-0.8.1\TaskKit
+Loading plug-in: UserKit at C:\forestal\Webware-0.8.1\UserKit
+Loading plug-in: WebUtils at C:\forestal\Webwa--------------------------------------------------------------------
+Installing Signal Handler
+__name__=WebKit.ThreadedAppServer
+WebKit AppServer 0.8.1
+part of Webware for Python
+Copyright 1999-2001 by Chuck Esterbrook. All Rights Reserved.
+WebKit and Webware are open source.
+Please visit:  http://webware.sourceforge.net
+
+Process id is 1828
+Date/time is Tue Jul 20 15:03:48 2004
+
+AutoReload             = 0
+AutoReloadPollInterval = 1
+CheckInterval          = 100
+Host                   = 127.0.0.1
+MaxServerThreads       = 20
+MinServerThreads       = 5
+NTServiceLogFilename   = c:\forestal\ForestManApp\Logs\NTService.log
+PlugInDirs             = ['C:\\forestal\\Webware-0.8.1']
+PlugIns                = []
+Port                   = 8086
+PrintConfigAtStartUp   = 1
+StartServerThreads     = 10
+Verbose                = 1
+
+ActivityLogColumns              = ['request.remoteAddress', 'request.method', 'request.uri', 'response.size', 'servlet.name', 'request.timeStamp', 'transaction.duration', 'transaction.errorOccurred']
+ActivityLogFilename             = c:\forestal\ForestManApp\Logs\Activity.csv
+AdminPassword                   = admin
+CacheServletClasses             = 1
+CacheServletInstances           = 1
+ClearPSPCacheOnStart            = 1
+Contexts                        = {'ForestMan': 'ForestMan', 'default': 'ForestMan'}
+Debug                           = {'Sessions': 0}
+DirectoryFile                   = ['index', 'Index', 'main', 'Main']
+DynamicSessionTimeout           = 15
+EmailErrorReportAsAttachment    = 0
+EmailErrors                     = 0
+ErrorEmailHeaders               = {'To': ['-@-.com'], 'Reply-to': '-@-.com', 'From': '-@-.com', 'Content-type': 'text/html', 'Subject': '[WebKit Error]'}
+ErrorEmailServer                = mail.-.com
+ErrorLogFilename                = c:\forestal\ForestManApp\Logs\Errors.csv
+ErrorMessagesDir                = c:\forestal\ForestManApp\ErrorMsgs
+ExtensionCascadeOrder           = ['.py', '.psp', '.html']
+ExtensionsToIgnore              = ['.pyc', '.pyo', '.py~', '.psp~', '.html~', '.bak', '.tmpl']
+ExtensionsToServe               = []
+ExtraPathInfo                   = 0
+FancyTracebackContext           = 5
+FilesToHide                     = ['.*', '*~', '*.bak', '*.tmpl', '*.config', '__init__.*', '*.pyc', '*.pyo']
+FilesToServe                    = []
+IgnoreInvalidSession            = 1
+IncludeFancyTraceback           = 0
+LogActivity                     = 0
+MaxDynamicMemorySessions        = 10000
+MaxValueLengthInExceptionReport = 500
+OldStyleActions                 = 0
+PrintConfigAtStartUp            = 1
+RPCExceptionReturn              = traceback
+ReportRPCExceptionsInWebKit     = 1
+SaveErrorMessages               = 1
+SessionPrefix                   = None
+SessionStore                    = Dynamic
+SessionTimeout                  = 60
+ShowDebugInfoOnErrors           = 1
+UnknownFileTypes                = {'CheckDate': 1, 'Technique': 'serveContent', 'CacheContent': 1, 'ReuseServlets': 1}
+UseAutomaticPathSessions        = 0
+UseCascadingExtensions          = 1
+UserErrorMessage                = The site is having technical difficulties with this page. An error has been logged, and the problem will be fixed as soon as possible. Sorry!
+
+Loading context: ForestMan at c:\forestal\ForestManApp\ForestMan
+
+Current directory: c:\forestal\ForestManApp
+Session Sweeper started
+
+Plug-ins list: C:\forestal\Webware-0.8.1\COMKit, C:\forestal\Webware-0.8.1\MiddleKit, C:\forestal\Webware-0.8.1\MiscUtils, C:\forestal\Webware-0.8.1\PSP, C:\forestal\Webware-0.8.1\TaskKit, C:\forestal\Webware-0.8.1\UserKit, C:\forestal\Webware-0.8.1\WebUtils
+Loading plug-in: COMKit at C:\forestal\Webware-0.8.1\COMKit
+Loading plug-in: MiddleKit at C:\forestal\Webware-0.8.1\MiddleKit
+Loading context: MKBrowser at C:/forestal/Webware-0.8.1\MiddleKit\WebBrowser
+Loading plug-in: MiscUtils at C:\forestal\Webware-0.8.1\MiscUtils
+Loading plug-in: PSP at C:\forestal\Webware-0.8.1\PSP
+Loading plug-in: TaskKit at C:\forestal\Webware-0.8.1\TaskKit
+Loading plug-in: UserKit at C:\forestal\Webware-0.8.1\UserKit
+Loading plug-in: WebUtils at C:\forestal\Webwa--------------------------------------------------------------------
+Installing Signal Handler
+__name__=WebKit.ThreadedAppServer
+WebKit AppServer 0.8.1
+part of Webware for Python
+Copyright 1999-2001 by Chuck Esterbrook. All Rights Reserved.
+WebKit and Webware are open source.
+Please visit:  http://webware.sourceforge.net
+
+Process id is 1936
+Date/time is Tue Jul 20 19:31:03 2004
+
+AutoReload             = 0
+AutoReloadPollInterval = 1
+CheckInterval          = 100
+Host                   = 127.0.0.1
+MaxServerThreads       = 20
+MinServerThreads       = 5
+NTServiceLogFilename   = c:\forestal\ForestManApp\Logs\NTService.log
+PlugInDirs             = ['C:\\forestal\\Webware-0.8.1']
+PlugIns                = []
+Port                   = 8086
+PrintConfigAtStartUp   = 1
+StartServerThreads     = 10
+Verbose                = 1
+
+ActivityLogColumns              = ['request.remoteAddress', 'request.method', 'request.uri', 'response.size', 'servlet.name', 'request.timeStamp', 'transaction.duration', 'transaction.errorOccurred']
+ActivityLogFilename             = c:\forestal\ForestManApp\Logs\Activity.csv
+AdminPassword                   = admin
+CacheServletClasses             = 1
+CacheServletInstances           = 1
+ClearPSPCacheOnStart            = 1
+Contexts                        = {'ForestMan': 'ForestMan', 'default': 'ForestMan'}
+Debug                           = {'Sessions': 0}
+DirectoryFile                   = ['index', 'Index', 'main', 'Main']
+DynamicSessionTimeout           = 15
+EmailErrorReportAsAttachment    = 0
+EmailErrors                     = 0
+ErrorEmailHeaders               = {'To': ['-@-.com'], 'Reply-to': '-@-.com', 'From': '-@-.com', 'Content-type': 'text/html', 'Subject': '[WebKit Error]'}
+ErrorEmailServer                = mail.-.com
+ErrorLogFilename                = c:\forestal\ForestManApp\Logs\Errors.csv
+ErrorMessagesDir                = c:\forestal\ForestManApp\ErrorMsgs
+ExtensionCascadeOrder           = ['.py', '.psp', '.html']
+ExtensionsToIgnore              = ['.pyc', '.pyo', '.py~', '.psp~', '.html~', '.bak', '.tmpl']
+ExtensionsToServe               = []
+ExtraPathInfo                   = 0
+FancyTracebackContext           = 5
+FilesToHide                     = ['.*', '*~', '*.bak', '*.tmpl', '*.config', '__init__.*', '*.pyc', '*.pyo']
+FilesToServe                    = []
+IgnoreInvalidSession            = 1
+IncludeFancyTraceback           = 0
+LogActivity                     = 0
+MaxDynamicMemorySessions        = 10000
+MaxValueLengthInExceptionReport = 500
+OldStyleActions                 = 0
+PrintConfigAtStartUp            = 1
+RPCExceptionReturn              = traceback
+ReportRPCExceptionsInWebKit     = 1
+SaveErrorMessages               = 1
+SessionPrefix                   = None
+SessionStore                    = Dynamic
+SessionTimeout                  = 60
+ShowDebugInfoOnErrors           = 1
+UnknownFileTypes                = {'CheckDate': 1, 'Technique': 'serveContent', 'CacheContent': 1, 'ReuseServlets': 1}
+UseAutomaticPathSessions        = 0
+UseCascadingExtensions          = 1
+UserErrorMessage                = The site is having technical difficulties with this page. An error has been logged, and the problem will be fixed as soon as possible. Sorry!
+
+Loading context: ForestMan at c:\forestal\ForestManApp\ForestMan
+
+Current directory: c:\forestal\ForestManApp
+Session Sweeper started
+
+Plug-ins list: C:\forestal\Webware-0.8.1\COMKit, C:\forestal\Webware-0.8.1\MiddleKit, C:\forestal\Webware-0.8.1\MiscUtils, C:\forestal\Webware-0.8.1\PSP, C:\forestal\Webware-0.8.1\TaskKit, C:\forestal\Webware-0.8.1\UserKit, C:\forestal\Webware-0.8.1\WebUtils
+Loading plug-in: COMKit at C:\forestal\Webware-0.8.1\COMKit
+Loading plug-in: MiddleKit at C:\forestal\Webware-0.8.1\MiddleKit
+Loading context: MKBrowser at C:/forestal/Webware-0.8.1\MiddleKit\WebBrowser
+Loading plug-in: MiscUtils at C:\forestal\Webware-0.8.1\MiscUtils
+Loading plug-in: PSP at C:\forestal\Webware-0.8.1\PSP
+Loading plug-in: TaskKit at C:\forestal\Webware-0.8.1\TaskKit
+Loading plug-in: UserKit at C:\forestal\Webware-0.8.1\UserKit
+Loading plug-in: WebUtils at C:\forestal\Webwa--------------------------------------------------------------------
+Installing Signal Handler
+__name__=WebKit.ThreadedAppServer
+WebKit AppServer 0.8.1
+part of Webware for Python
+Copyright 1999-2001 by Chuck Esterbrook. All Rights Reserved.
+WebKit and Webware are open source.
+Please visit:  http://webware.sourceforge.net
+
+Process id is 1648
+Date/time is Tue Jul 20 22:23:28 2004
+
+AutoReload             = 0
+AutoReloadPollInterval = 1
+CheckInterval          = 100
+Host                   = 127.0.0.1
+MaxServerThreads       = 20
+MinServerThreads       = 5
+NTServiceLogFilename   = c:\forestal\ForestManApp\Logs\NTService.log
+PlugInDirs             = ['C:\\forestal\\Webware-0.8.1']
+PlugIns                = []
+Port                   = 8086
+PrintConfigAtStartUp   = 1
+StartServerThreads     = 10
+Verbose                = 1
+
+ActivityLogColumns              = ['request.remoteAddress', 'request.method', 'request.uri', 'response.size', 'servlet.name', 'request.timeStamp', 'transaction.duration', 'transaction.errorOccurred']
+ActivityLogFilename             = c:\forestal\ForestManApp\Logs\Activity.csv
+AdminPassword                   = admin
+CacheServletClasses             = 1
+CacheServletInstances           = 1
+ClearPSPCacheOnStart            = 1
+Contexts                        = {'ForestMan': 'ForestMan', 'default': 'ForestMan'}
+Debug                           = {'Sessions': 0}
+DirectoryFile                   = ['index', 'Index', 'main', 'Main']
+DynamicSessionTimeout           = 15
+EmailErrorReportAsAttachment    = 0
+EmailErrors                     = 0
+ErrorEmailHeaders               = {'To': ['-@-.com'], 'Reply-to': '-@-.com', 'From': '-@-.com', 'Content-type': 'text/html', 'Subject': '[WebKit Error]'}
+ErrorEmailServer                = mail.-.com
+ErrorLogFilename                = c:\forestal\ForestManApp\Logs\Errors.csv
+ErrorMessagesDir                = c:\forestal\ForestManApp\ErrorMsgs
+ExtensionCascadeOrder           = ['.py', '.psp', '.html']
+ExtensionsToIgnore              = ['.pyc', '.pyo', '.py~', '.psp~', '.html~', '.bak', '.tmpl']
+ExtensionsToServe               = []
+ExtraPathInfo                   = 0
+FancyTracebackContext           = 5
+FilesToHide                     = ['.*', '*~', '*.bak', '*.tmpl', '*.config', '__init__.*', '*.pyc', '*.pyo']
+FilesToServe                    = []
+IgnoreInvalidSession            = 1
+IncludeFancyTraceback           = 0
+LogActivity                     = 0
+MaxDynamicMemorySessions        = 10000
+MaxValueLengthInExceptionReport = 500
+OldStyleActions                 = 0
+PrintConfigAtStartUp            = 1
+RPCExceptionReturn              = traceback
+ReportRPCExceptionsInWebKit     = 1
+SaveErrorMessages               = 1
+SessionPrefix                   = None
+SessionStore                    = Dynamic
+SessionTimeout                  = 60
+ShowDebugInfoOnErrors           = 1
+UnknownFileTypes                = {'CheckDate': 1, 'Technique': 'serveContent', 'CacheContent': 1, 'ReuseServlets': 1}
+UseAutomaticPathSessions        = 0
+UseCascadingExtensions          = 1
+UserErrorMessage                = The site is having technical difficulties with this page. An error has been logged, and the problem will be fixed as soon as possible. Sorry!
+
+Loading context: ForestMan at c:\forestal\ForestManApp\ForestMan
+
+Current directory: c:\forestal\ForestManApp
+Session Sweeper started
+
+Plug-ins list: C:\forestal\Webware-0.8.1\COMKit, C:\forestal\Webware-0.8.1\MiddleKit, C:\forestal\Webware-0.8.1\MiscUtils, C:\forestal\Webware-0.8.1\PSP, C:\forestal\Webware-0.8.1\TaskKit, C:\forestal\Webware-0.8.1\UserKit, C:\forestal\Webware-0.8.1\WebUtils
+Loading plug-in: COMKit at C:\forestal\Webware-0.8.1\COMKit
+Loading plug-in: MiddleKit at C:\forestal\Webware-0.8.1\MiddleKit
+Loading context: MKBrowser at C:/forestal/Webware-0.8.1\MiddleKit\WebBrowser
+Loading plug-in: MiscUtils at C:\forestal\Webware-0.8.1\MiscUtils
+Loading plug-in: PSP at C:\forestal\Webware-0.8.1\PSP
+Loading plug-in: TaskKit at C:\forestal\Webware-0.8.1\TaskKit
+Loading plug-in: UserKit at C:\forestal\Webware-0.8.1\UserKit
+Loading plug-in: WebUtils at C:\forestal\Webwa--------------------------------------------------------------------
+Installing Signal Handler
+__name__=WebKit.ThreadedAppServer
+WebKit AppServer 0.8.1
+part of Webware for Python
+Copyright 1999-2001 by Chuck Esterbrook. All Rights Reserved.
+WebKit and Webware are open source.
+Please visit:  http://webware.sourceforge.net
+
+Process id is 1484
+Date/time is Wed Jul 21 10:29:17 2004
+
+AutoReload             = 0
+AutoReloadPollInterval = 1
+CheckInterval          = 100
+Host                   = 127.0.0.1
+MaxServerThreads       = 20
+MinServerThreads       = 5
+NTServiceLogFilename   = c:\forestal\ForestManApp\Logs\NTService.log
+PlugInDirs             = ['C:\\forestal\\Webware-0.8.1']
+PlugIns                = []
+Port                   = 8086
+PrintConfigAtStartUp   = 1
+StartServerThreads     = 10
+Verbose                = 1
+
+ActivityLogColumns              = ['request.remoteAddress', 'request.method', 'request.uri', 'response.size', 'servlet.name', 'request.timeStamp', 'transaction.duration', 'transaction.errorOccurred']
+ActivityLogFilename             = c:\forestal\ForestManApp\Logs\Activity.csv
+AdminPassword                   = admin
+CacheServletClasses             = 1
+CacheServletInstances           = 1
+ClearPSPCacheOnStart            = 1
+Contexts                        = {'ForestMan': 'ForestMan', 'default': 'ForestMan'}
+Debug                           = {'Sessions': 0}
+DirectoryFile                   = ['index', 'Index', 'main', 'Main']
+DynamicSessionTimeout           = 15
+EmailErrorReportAsAttachment    = 0
+EmailErrors                     = 0
+ErrorEmailHeaders               = {'To': ['-@-.com'], 'Reply-to': '-@-.com', 'From': '-@-.com', 'Content-type': 'text/html', 'Subject': '[WebKit Error]'}
+ErrorEmailServer                = mail.-.com
+ErrorLogFilename                = c:\forestal\ForestManApp\Logs\Errors.csv
+ErrorMessagesDir                = c:\forestal\ForestManApp\ErrorMsgs
+ExtensionCascadeOrder           = ['.py', '.psp', '.html']
+ExtensionsToIgnore              = ['.pyc', '.pyo', '.py~', '.psp~', '.html~', '.bak', '.tmpl']
+ExtensionsToServe               = []
+ExtraPathInfo                   = 0
+FancyTracebackContext           = 5
+FilesToHide                     = ['.*', '*~', '*.bak', '*.tmpl', '*.config', '__init__.*', '*.pyc', '*.pyo']
+FilesToServe                    = []
+IgnoreInvalidSession            = 1
+IncludeFancyTraceback           = 0
+LogActivity                     = 0
+MaxDynamicMemorySessions        = 10000
+MaxValueLengthInExceptionReport = 500
+OldStyleActions                 = 0
+PrintConfigAtStartUp            = 1
+RPCExceptionReturn              = traceback
+ReportRPCExceptionsInWebKit     = 1
+SaveErrorMessages               = 1
+SessionPrefix                   = None
+SessionStore                    = Dynamic
+SessionTimeout                  = 60
+ShowDebugInfoOnErrors           = 1
+UnknownFileTypes                = {'CheckDate': 1, 'Technique': 'serveContent', 'CacheContent': 1, 'ReuseServlets': 1}
+UseAutomaticPathSessions        = 0
+UseCascadingExtensions          = 1
+UserErrorMessage                = The site is having technical difficulties with this page. An error has been logged, and the problem will be fixed as soon as possible. Sorry!
+
+Loading context: ForestMan at c:\forestal\ForestManApp\ForestMan
+
+Current directory: c:\forestal\ForestManApp
+Session Sweeper started
+
+Plug-ins list: C:\forestal\Webware-0.8.1\COMKit, C:\forestal\Webware-0.8.1\MiddleKit, C:\forestal\Webware-0.8.1\MiscUtils, C:\forestal\Webware-0.8.1\PSP, C:\forestal\Webware-0.8.1\TaskKit, C:\forestal\Webware-0.8.1\UserKit, C:\forestal\Webware-0.8.1\WebUtils
+Loading plug-in: COMKit at C:\forestal\Webware-0.8.1\COMKit
+Loading plug-in: MiddleKit at C:\forestal\Webware-0.8.1\MiddleKit
+Loading context: MKBrowser at C:/forestal/Webware-0.8.1\MiddleKit\WebBrowser
+Loading plug-in: MiscUtils at C:\forestal\Webware-0.8.1\MiscUtils
+Loading plug-in: PSP at C:\forestal\Webware-0.8.1\PSP
+Loading plug-in: TaskKit at C:\forestal\Webware-0.8.1\TaskKit
+Loading plug-in: UserKit at C:\forestal\Webware-0.8.1\UserKit
+Loading plug-in: WebUtils at C:\forestal\Webwa
