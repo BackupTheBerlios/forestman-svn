@@ -1,0 +1,19 @@
+CREATE TABLE `siglim` (
+  `Siglimden` varchar(30) default NULL,
+  `Siglimsig` float(10,2) default NULL,
+  `Siglimcc` char(2) default NULL,
+  `Sup_legal` float(16,2) default NULL,
+  `Area` float(16,3) default NULL,
+  `Perimeter` float(16,3) default NULL,
+  `Hectares` float(16,3) default NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1
+
+CREATE TABLE `rodal` (
+  `Sigrodid` varchar(11) default NULL,
+  `Hectares` float(18,4) default NULL,
+  `Cc` char(2) default NULL,
+  `Sp` char(2) default NULL,
+  `Ano` int(4) default NULL,
+  `E` char(1) default NULL,
+  `Dens` float(18,4) default NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1
