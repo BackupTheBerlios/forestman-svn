@@ -29,17 +29,17 @@ def planninglistitems_generator(conn):
 	cursor=conn.cursor(MySQLdb.cursors.DictCursor)
 	cursor.execute("""
 			SELECT 
-			  Left(sigrod.Sigrodid,8) AS StandId, 
-			  SUM(sigrod.Hectares) AS TotalHas, 
+			  rodal.Sigrodid AS StandId, 
+			  rodal.Hectares AS TotalHas, 
 			  TaskList.TaskId, 
-			  sigrod.Cc AS PropId, 
+			  rodal.Cc AS PropId, 
 			  Year(Now()) as BudgetYear,
 			  TaskList.UnitId 
-			FROM TaskList, sigrod
-			WHERE (((TaskList.AgeMin)<=(Year(Now())-sigrod.Ano)) 
-			  AND ((TaskList.AgeMax)>=(Year(Now())-sigrod.Ano)))
+			FROM TaskList, rodal
+			WHERE (((TaskList.AgeMin)<=(Year(Now())-rodal.Ano)) 
+			  AND ((TaskList.AgeMax)>=(Year(Now())-rodal.Ano)))
 			GROUP BY StandId
-			ORDER BY Year(Now())-sigrod.Ano, TaskList.TaskId
+			ORDER BY Year(Now())-rodal.Ano, TaskList.TaskId
 			""")
 	return cursor.fetchall()
 

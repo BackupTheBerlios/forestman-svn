@@ -16,6 +16,7 @@ class SimpleTableAdapter:
 		import TableConstructors
 		#check the table exists and get the name and fields. we assume the 1st field is the primary index
 		self.name, self.fields,self.necessaryfields =tableconstructor(self.cursor)
+		self.filters={}
 		
 	def add(self,data):
 		"""
@@ -41,6 +42,11 @@ class SimpleTableAdapter:
 		query=query_top+query_bottom+")"
 		self.cursor.execute(query , data)
 
+		self.cursor.execute("SELECT LAST_INSERT_ID()")
+		last_insert_id=self.cursor.fetchone()['LAST_INSERT_ID()']
+		return {self.fields[0]:last_insert_id}
+
+
 	def delete(self,id):
 		if type(id)==type(dict()):
 			self.cursor.execute("DELETE FROM " + self.name +
@@ -58,12 +64,11 @@ class SimpleTableAdapter:
 
 		s = "UPDATE "+self.name+" SET "
 		addcomma=False;
-		for name in data:
-			if name != self.fields[0]:
-				if addcomma:
-					s+=", "
-				s+=name + " = %("+name+")s "
-				addcomma=True
+		for name in data in self.fields[1:]:
+			if addcomma:
+				s+=", "
+			s+=name + " = %("+name+")s "
+			addcomma=True
 			
 		s+="WHERE "+self.fields[0]+" = %(" + self.fields[0] +")s"
 
@@ -71,9 +76,19 @@ class SimpleTableAdapter:
 	
 	def get(self):
 		"""
-		Returns the table as a dictionary 
+		Returns the table as a dictionary, filtering if set 
 		"""
-		self.cursor.execute("SELECT * FROM " +self.name)
+		sql="SELECT * FROM " +self.name
+		if self.filters:
+			sql+=" WHERE "
+			addcomma=False
+			for name in self.filters:
+				if addcomma:
+					sql+=", "
+				s+=name + " = %("+name+")s "
+				addcomma=True
+				
+		self.cursor.execute(sql,self.filters)
 		return self.cursor.fetchall()
 
 	def fillemptyfields(self,data):

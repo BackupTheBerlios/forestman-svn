@@ -5,6 +5,11 @@ import MySQLdb
 import gettext
 gettext.install('ForestMan')
 
+from Globals import MiddleLayerError
+
+class DuplicateTaskIdError(MiddleLayerError):
+	pass
+
 class TaskCreator:
 	"""
 	Middleware object representing the user modifiable list of possible tasks
@@ -18,38 +23,41 @@ class TaskCreator:
 		
 	def add(self,task):
 		"""
-		task is a dict which should have keys UnitId, AgeMin, AgeMax, GroupId
-		it can optionally have Description
+		task is a dict which should have keys TaskId (a unique 4 char code), UnitId, AgeMin, AgeMax, TaskGroupId, and Description
 		"""
 		assert(task.has_key('TaskId'))
 		assert(task.has_key('UnitId'))
 		assert(task.has_key('AgeMin'))
 		assert(task.has_key('AgeMax'))
-		assert(task.has_key('GroupId'))
+		assert(task.has_key('TaskGroupId'))
+		assert(task.has_key('Description'))
 
-		def fill(key, val=None):
-			if not task.has_key(key):
-				task[key]=val
+		#if the user has created a duplicate task id an IntegrityError will be thrown.
+		#catch this and convert it into our own error of 'DuplicateTaskIdError'
 	
-		fill('Description',"")
-
-		self.cursor.execute("""	
-					INSERT INTO TaskList (
-					  TaskId,
-					  UnitId,
-					  AgeMin,
-					  AgeMax,
-					  GroupId,
-					  Description
-					  )
-					VALUES (
-					  %(TaskId)s,
-					  %(UnitId)s,
-					  %(AgeMin)s,
-					  %(AgeMax)s,
-					  %(GroupId)s,
-					  %(Description)s
-					) """ , task)
+		try:
+			self.cursor.execute("""	
+						INSERT INTO TaskList (
+						  TaskId,
+						  UnitId,
+						  AgeMin,
+						  AgeMax,
+						  TaskGroupId,
+						  Description
+						  )
+						VALUES (
+						  %(TaskId)s,
+						  %(UnitId)s,
+						  %(AgeMin)s,
+						  %(AgeMax)s,
+						  %(TaskGroupId)s,
+						  %(Description)s
+						) """ , task)
+		except MySQLdb.IntegrityError, e:
+			raise DuplicateTaskIdError, _('A duplicate Task Id was created')
+		self.cursor.execute("SELECT LAST_INSERT_ID()")
+		last_insert_id=self.cursor.fetchone()['LAST_INSERT_ID()']
+		return {'TaskListId':last_insert_id}
 
 	def delete(self,id):
 		if type(id)==type(dict()):
@@ -69,12 +77,12 @@ class TaskCreator:
 		s = "UPDATE TaskList SET "
 		addcomma=False;
 		for name in fields:
-			if name != 'TaskId':
+			if name in ['UnitId', 'AgeMin','AgeMax','TaskGroupId','Description']:
 				if addcomma:
 					s+=", "
 				s+=name + " = %("+name+")s "
 				addcomma=True
-			
+				
 		s+="WHERE TaskId = %(TaskId)s"
 
 		self.cursor.execute(s,fields)
@@ -92,7 +100,7 @@ if __name__ == "__main__":
 	try:
 		conn = MySQLdb.connect (host = "localhost",
 								user = "test",
-								db = "test")
+								db   = "test")
 	except MySQLdb.Error, e:
 		print "Error %d: %s" % (e.args[0], e.args[1])
 		sys.exit (1)

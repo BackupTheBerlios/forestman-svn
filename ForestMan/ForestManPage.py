@@ -20,5 +20,10 @@ class ForestManPage(SidebarPage):
 
 
 	def title(self):
-		return _("Monkey Buisness!!")
+		return _("Empty ForestMan template")
 
+	def writeErrorBody(self,error):
+		self.writeln('<h1>')
+		self.writeln(_("An error occurred"))
+		self.writeln('</h1>')
+		self.writeln(error.errortext)

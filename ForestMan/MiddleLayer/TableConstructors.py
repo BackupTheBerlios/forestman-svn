@@ -4,8 +4,8 @@ def createPlanningItems(cursor):
 			(
 				PlanningItemId 	INT NOT NULL AUTO_INCREMENT,
 				BudgetYear	SMALLINT,
-				PropId		INT,
-				StandId		INT,
+				PropId		TINYINT,
+				StandId		CHAR(9),
 				Quantity	FLOAT,
 				UnitId		SMALLINT,
 				TaskId		CHAR(4) NOT NULL,
@@ -18,6 +18,24 @@ def createPlanningItems(cursor):
 			 ('PlanningItemId','BudgetYear','PropId','StandId','Quantity','UnitId','TaskId','YieldFac','EstPrice'),
 			 ('BudgetYear','PropId','StandId','UnitId','TaskId') )
 
+def createPurchaseOrderList(cursor):
+	cursor.execute("""
+			CREATE TABLE IF NOT EXISTS PurchaseOrderList
+			(
+				PurchaseOrder	INT NOT NULL,
+				ContractorId	INT,
+				StartDate		DATE,
+				EndDate			DATE,
+				PropId			TINYINT,
+				TaskGroupId		TINYINT,
+				PRIMARY KEY (PurchaseOrder),
+				UNIQUE		(PurchaseOrder)
+			)
+			""")
+	return ( 'PurchaseOrderList',
+			 ('PurchaseOrder','ContractorId','StartDate','EndDate','PropId','StandId'),
+			 ('PurchaseOrder','ContractorId','StartDate','EndDate','PropId','StandId'))
+	
 def createContractedItems(cursor):
 	cursor.execute("""
 			CREATE TABLE IF NOT EXISTS ContractedItems 
@@ -25,12 +43,9 @@ def createContractedItems(cursor):
 				ContractedItemId 	INT NOT NULL AUTO_INCREMENT,
 				PlanningItemId	INT,
 				PurchaseOrder	INT,
-				ContractorId	INT,
 				ContractedQty	FLOAT,
 				ContractedUnitId SMALLINT,
 				ContractedUnitPrice 	DECIMAL(14,2),
-				StartDate		DATE,
-				EndDate			DATE,
 				Completed		ENUM('N','Y') NOT NULL,
 				PRIMARY KEY (ContractedItemId),
 				KEY (PurchaseOrder)
@@ -45,7 +60,7 @@ def createContractedTransactions(cursor):
 				ContractedItemId	INT,
 				QtyCompleted		FLOAT,
 				CompletionDate		DATE,
-				ContractedUnitPrice	DECIMAL(14,2),
+				UnitPrice			DECIMAL(14,2),
 				PRIMARY KEY (ContractedTransactionId),
 				KEY (ContractedItemId)
 			) ENGINE=InnoDB
@@ -67,7 +82,8 @@ def createInvoices(cursor):
 	cursor.execute("""
 			CREATE TABLE IF NOT EXISTS Invoices
 			(
-				InvoiceId 	INT NOT NULL,
+				InvoiceId 	INT NOT NULL AUTO_INCREMENT,
+				ContractedTransactionId INT,
 				InvoiceNo	INT,
 				ScaleTicketNo	INT,
 				PlateNo		INT,
@@ -76,8 +92,8 @@ def createInvoices(cursor):
 				LogLength	FLOAT,
 				LogDiameterMin	FLOAT,
 				LogDiameterMax	FLOAT,
-				Checked		TINYINT(1) UNSIGNED NOT NULL
-				PRIMARY KEY (ContractedTransactionId)
+				Checked		ENUM('N','Y') NOT NULL,
+				PRIMARY KEY (InvoiceId)
 			) ENGINE=InnoDB
 		       """)
 
@@ -90,7 +106,7 @@ def createTaskList(cursor):
 				UnitId	 	TINYINT,
 				AgeMin  	TINYINT,
 				AgeMax  	TINYINT,
-				GroupId		TINYINT,
+				TaskGroupId		TINYINT,
 				PRIMARY KEY	(TaskId),
 				UNIQUE		(TaskId)
 			) ENGINE=InnoDB
